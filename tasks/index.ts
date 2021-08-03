@@ -1,0 +1,9 @@
+import "./deployers/balanceSheet";
+import "./deployers/chainlinkOperator";
+import "./deployers/fintroller";
+import "./deployers/hifiFlashUniswapV2";
+import "./deployers/hifiPool";
+import "./deployers/hifiProxyTarget";
+import "./deployers/hToken";
+import "./deployers/simplePriceFeed";
+import "./deployers/stablecoinPriceFeed";
