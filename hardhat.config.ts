@@ -19,16 +19,16 @@ const chainIds = {
   ropsten: 3,
 };
 
-// Ensure that we have all the environment variables we need.
-const mnemonic = process.env.MNEMONIC;
-if (!mnemonic) {
-  throw new Error("Please set your MNEMONIC in a .env file");
+function getEnvVar(key: string): string {
+  if (!process.env[key]) {
+    throw new Error(`Please set ${key} as an env variable`);
+  }
+  return process.env[key] || "";
 }
 
-const infuraApiKey = process.env.INFURA_API_KEY;
-if (!infuraApiKey) {
-  throw new Error("Please set your INFURA_API_KEY in a .env file");
-}
+// Ensure that we have all the environment variables we need.
+const mnemonic: string = getEnvVar("MNEMONIC");
+const infuraApiKey: string = getEnvVar("INFURA_API_KEY");
 
 function createTestnetConfig(network: keyof typeof chainIds): NetworkUserConfig {
   const url: string = "https://" + network + ".infura.io/v3/" + infuraApiKey;

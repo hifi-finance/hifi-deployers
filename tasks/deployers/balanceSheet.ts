@@ -5,6 +5,7 @@ import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
 import { task } from "hardhat/config";
 import { TaskArguments } from "hardhat/types";
 
+// Not working. See https://github.com/OpenZeppelin/openzeppelin-upgrades/issues/402.
 task("deploy:BalanceSheet")
   .addParam("fintroller", "The address of the Fintroller contract")
   .addParam("oracle", "The address of the oracle contract")
