@@ -12,9 +12,7 @@ import { NetworkUserConfig } from "hardhat/types";
 dotenvConfig({ path: resolve(__dirname, "./.env") });
 
 const chainIds = {
-  ganache: 1337,
   goerli: 5,
-  hardhat: 31337,
   kovan: 42,
   mainnet: 1,
   rinkeby: 4,
@@ -47,30 +45,12 @@ function createTestnetConfig(network: keyof typeof chainIds): NetworkUserConfig 
 }
 
 const config: HardhatUserConfig = {
-  defaultNetwork: "hardhat",
+  defaultNetwork: "rinkeby",
   networks: {
-    hardhat: {
-      accounts: {
-        mnemonic,
-      },
-      chainId: chainIds.hardhat,
-    },
     goerli: createTestnetConfig("goerli"),
     kovan: createTestnetConfig("kovan"),
     rinkeby: createTestnetConfig("rinkeby"),
     ropsten: createTestnetConfig("ropsten"),
-  },
-  solidity: {
-    version: "0.8.6",
-    settings: {
-      metadata: {
-        bytecodeHash: "none",
-      },
-      optimizer: {
-        enabled: true,
-        runs: 800,
-      },
-    },
   },
 };
 

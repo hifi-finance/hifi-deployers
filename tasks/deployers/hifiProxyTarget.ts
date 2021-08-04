@@ -4,7 +4,7 @@ import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
 import { HifiProxyTarget } from "@hifi/proxy-target/typechain/HifiProxyTarget";
 import { task } from "hardhat/config";
 
-task("deploy:Fintroller").setAction(async function (_, { ethers }) {
+task("deploy:HifiProxyTarget").setAction(async function (_, { ethers }) {
   const signers: SignerWithAddress[] = await ethers.getSigners();
   const hifiProxyTargetFactory: ContractFactory = new ContractFactory(
     HifiProxyTargetArtifact.abi,

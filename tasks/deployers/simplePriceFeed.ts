@@ -5,7 +5,7 @@ import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
 import { task } from "hardhat/config";
 import { TaskArguments } from "hardhat/types";
 
-task("deploy:StablecoinPriceFeed")
+task("deploy:SimplePriceFeed")
   .addParam("description", "The description of the price feed")
   .setAction(async function (taskArguments: TaskArguments, { ethers }) {
     const signers: SignerWithAddress[] = await ethers.getSigners();
