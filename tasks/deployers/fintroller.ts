@@ -2,10 +2,9 @@ import { ContractFactory } from "@ethersproject/contracts";
 import FintrollerV1Artifact from "@hifi/protocol/artifacts/FintrollerV1.json";
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
 import { FintrollerV1 } from "@hifi/protocol/typechain/FintrollerV1";
-import { upgrades } from "hardhat";
 import { task } from "hardhat/config";
 
-task("deploy:Fintroller").setAction(async function (_, { ethers }) {
+task("deploy:Fintroller").setAction(async function (_, { ethers, upgrades }) {
   const signers: SignerWithAddress[] = await ethers.getSigners();
   const fintrollerV1Factory: ContractFactory = new ContractFactory(
     FintrollerV1Artifact.abi,

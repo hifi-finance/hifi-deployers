@@ -8,7 +8,6 @@ cache/
 dist/
 lib/
 node_modules/
-typechain/
 
 # files
 *.env

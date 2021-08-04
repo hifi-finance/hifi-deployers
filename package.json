@@ -47,25 +47,16 @@
     "blockchain",
     "ethereum",
     "hifi",
-    "smart-contracts",
-    "solidity"
+    "smart-contracts"
   ],
   "license": "LGPL-3.0-or-later",
   "private": true,
   "scripts": {
-    "clean": "hardhat clean",
     "commit": "git-cz",
-    "compile": "hardhat compile",
-    "coverage": "hardhat coverage --solcoverjs ./.solcover.js --temp artifacts --testfiles \"./test/**/*.ts\"",
-    "deploy": "hardhat run scripts/deploy.ts",
-    "deploy:network": "hardhat run scripts/deploy.ts --network",
-    "lint": "yarn run lint:sol && yarn run lint:ts && yarn run prettier:check",
-    "lint:sol": "solhint --config ./.solhint.json --max-warnings 0 \"contracts/**/*.sol\"",
+    "lint": "yarn run lint:ts && yarn run prettier:check",
     "lint:ts": "eslint --config ./.eslintrc.yaml --ignore-path ./.eslintignore --ext .js,.ts .",
     "postinstall": "husky install",
-    "prettier": "prettier --config ./.prettierrc --write \"**/*.{js,json,md,sol,ts}\"",
-    "prettier:check": "prettier --check --config ./.prettierrc \"**/*.{js,json,md,sol,ts}\"",
-    "test": "hardhat test",
-    "typechain": "hardhat typechain"
+    "prettier": "prettier --config ./.prettierrc --write \"**/*.{js,json,md,ts}\"",
+    "prettier:check": "prettier --check --config ./.prettierrc \"**/*.{js,json,md,ts}\""
   }
 }

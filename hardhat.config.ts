@@ -1,6 +1,8 @@
 import "@nomiclabs/hardhat-ethers";
 import "@openzeppelin/hardhat-upgrades";
 
+import "./tasks/deployers";
+
 import { resolve } from "path";
 
 import { config as dotenvConfig } from "dotenv";
