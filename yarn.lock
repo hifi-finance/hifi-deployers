@@ -272,13 +272,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cto.af/textdecoder@npm:^0.0.0":
-  version: 0.0.0
-  resolution: "@cto.af/textdecoder@npm:0.0.0"
-  checksum: c6bd8045a8e4fae82d997af199e852ba3efc128c1ea52c52463100402178577fee889cacf590fe09872eb72bec2abf799da4e67a8bc0960d41281b722b0adf7d
-  languageName: node
-  linkType: hard
-
 "@eslint/eslintrc@npm:^0.4.3":
   version: 0.4.3
   resolution: "@eslint/eslintrc@npm:0.4.3"
@@ -825,18 +818,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hifi/amm@npm:1.3.0":
-  version: 1.3.0
-  resolution: "@hifi/amm@npm:1.3.0"
+"@hifi/amm@npm:1.4.0":
+  version: 1.4.0
+  resolution: "@hifi/amm@npm:1.4.0"
   dependencies:
-    "@hifi/protocol": 1.3.0
+    "@hifi/protocol": 1.4.0
     "@paulrberg/contracts": 3.4.0
+    ethers: ^5.4.4
     prb-math: 2.2.0
   peerDependencies:
-    "@hifi/protocol": 1.3.0
+    "@hifi/protocol": 1.4.0
     "@paulrberg/contracts": 3.4.0
+    ethers: ^5.4.4
     prb-math: 2.2.0
-  checksum: a489d4ac458eb9358b4ef221a929bdbfad7492b4cf8dc78f2d88d10f146294b9703ada6c8bb1df6eed17574c86e5dfff0a453c1819174494a919d592f1d38b67
+  checksum: ad5b183c15f4700fa89b6a82486a338d0756c64c0db73bf81480019b5fa24f5a1604e22f73d93c982e47e30f4fb176d34561ce556adaf619f786c96f7c4ac0b1
   languageName: node
   linkType: hard
 
@@ -851,14 +846,12 @@ __metadata:
     "@ethersproject/bytes": ^5.4.0
     "@ethersproject/contracts": ^5.4.1
     "@ethersproject/providers": ^5.4.3
-    "@hifi/amm": 1.3.0
-    "@hifi/flash-swap": 1.2.0
-    "@hifi/protocol": 1.3.0
-    "@hifi/proxy-target": 1.2.0
+    "@hifi/amm": 1.4.0
+    "@hifi/flash-swap": 1.3.1
+    "@hifi/protocol": 1.4.0
+    "@hifi/proxy-target": 1.3.1
     "@nomiclabs/hardhat-ethers": ^2.0.2
-    "@openzeppelin/contracts-upgradeable": 4.2.0
-    "@openzeppelin/hardhat-upgrades": ^1.9.0
-    "@types/node": ^16.4.13
+    "@types/node": ^16.6.1
     "@typescript-eslint/eslint-plugin": ^4.29.1
     "@typescript-eslint/parser": ^4.29.1
     commitizen: ^4.2.4
@@ -879,48 +872,54 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@hifi/flash-swap@npm:1.2.0":
-  version: 1.2.0
-  resolution: "@hifi/flash-swap@npm:1.2.0"
+"@hifi/flash-swap@npm:1.3.1":
+  version: 1.3.1
+  resolution: "@hifi/flash-swap@npm:1.3.1"
   dependencies:
-    "@hifi/protocol": 1.3.0
+    "@hifi/protocol": 1.4.0
     "@paulrberg/contracts": 3.4.0
     "@uniswap/v2-core": 1.0.1
+    ethers: ^5.4.4
   peerDependencies:
-    "@hifi/protocol": 1.3.0
+    "@hifi/protocol": 1.4.0
     "@paulrberg/contracts": 3.4.0
     "@uniswap/v2-core": 1.0.1
-  checksum: f39586577dfe5394b253ad4b60b859d1d68e243cbc750c5a3038b19f876d1d0ac6062f012a01f76c3c80e4acd476a621da28be71655540ac4b1eacfab3c06c13
+    ethers: ^5.4.4
+  checksum: 31e54db705c930e24395e79ab8ab89c764eef9a9c9fbb903f114300d494b447e6a9bc27866fa416ee00936b448c34cb52cff562e4d8dcd0a22f92f39ac5008da
   languageName: node
   linkType: hard
 
-"@hifi/protocol@npm:1.3.0":
-  version: 1.3.0
-  resolution: "@hifi/protocol@npm:1.3.0"
+"@hifi/protocol@npm:1.4.0":
+  version: 1.4.0
+  resolution: "@hifi/protocol@npm:1.4.0"
   dependencies:
     "@openzeppelin/contracts-upgradeable": 4.2.0
     "@paulrberg/contracts": 3.4.0
+    ethers: ^5.4.4
     prb-math: 2.2.0
   peerDependencies:
     "@openzeppelin/contracts-upgradeable": 4.2.0
     "@paulrberg/contracts": 3.4.0
+    ethers: ^5.4.4
     prb-math: 2.2.0
-  checksum: 30a78955186fe38b4ae5729a7db44a79816d745fb3376bdc232087dbba4214bafb0c531f4350f8e373ea66bca0bc2d90de61f0c3b784d272e15c637f6eb41d3a
+  checksum: e126b68c3ed016e0cb2b9a419c890faed7fb2cd44ea0a12eac56a869f0e9def308286a26f4470d792ed789f5a13a8684dad3074dddb584102f9782e43df4cd08
   languageName: node
   linkType: hard
 
-"@hifi/proxy-target@npm:1.2.0":
-  version: 1.2.0
-  resolution: "@hifi/proxy-target@npm:1.2.0"
+"@hifi/proxy-target@npm:1.3.1":
+  version: 1.3.1
+  resolution: "@hifi/proxy-target@npm:1.3.1"
   dependencies:
-    "@hifi/amm": 1.3.0
-    "@hifi/protocol": 1.3.0
+    "@hifi/amm": 1.4.0
+    "@hifi/protocol": 1.4.0
     "@paulrberg/contracts": 3.4.0
+    ethers: ^5.4.4
   peerDependencies:
-    "@hifi/amm": 1.3.0
-    "@hifi/protocol": 1.3.0
+    "@hifi/amm": 1.4.0
+    "@hifi/protocol": 1.4.0
     "@paulrberg/contracts": 3.4.0
-  checksum: c786c6b4b58dfc7740e9629a9ffb557a18b6f1461ff3f542daaa00e57ddfab42d91325837ef8d2fd30dec64c9bd34519025ac5ed53e271588d74912753eb59cc
+    ethers: ^5.4.4
+  checksum: 783eae9a9feeb74d90904fb566b4be47c23a1412aaf9fc7275b0674b18005e57fd17cc0aa16cdb9af10a0f9a60b7b4d5a8cfee278b637499516a91d2feca97b6
   languageName: node
   linkType: hard
 
@@ -993,36 +992,6 @@ __metadata:
   version: 4.2.0
   resolution: "@openzeppelin/contracts-upgradeable@npm:4.2.0"
   checksum: 76f0105f162e3fe96fbb894c7cb9ed5fa1da2b3015a642bd22c6d177ce6795ef3caddee41675cc2c62e5aef900c122b67e561bba31e143c03087b1fe519364e5
-  languageName: node
-  linkType: hard
-
-"@openzeppelin/hardhat-upgrades@npm:^1.9.0":
-  version: 1.9.0
-  resolution: "@openzeppelin/hardhat-upgrades@npm:1.9.0"
-  dependencies:
-    "@openzeppelin/upgrades-core": ^1.8.0
-  peerDependencies:
-    "@nomiclabs/hardhat-ethers": ^2.0.0
-    hardhat: ^2.0.2
-  bin:
-    migrate-oz-cli-project: dist/scripts/migrate-oz-cli-project.js
-  checksum: 1e585d0fc97741b0953b788a82cbea26e1c80c5b238699b08a9f2d850a528f0ca259e5f74d23d2a3ff4878231c89feffd0525f6a5740d7404aea9ff8d383168a
-  languageName: node
-  linkType: hard
-
-"@openzeppelin/upgrades-core@npm:^1.8.0":
-  version: 1.8.0
-  resolution: "@openzeppelin/upgrades-core@npm:1.8.0"
-  dependencies:
-    bn.js: ^5.1.2
-    cbor: ^7.0.0
-    chalk: ^4.1.0
-    compare-versions: ^3.6.0
-    debug: ^4.1.1
-    ethereumjs-util: ^7.0.3
-    proper-lockfile: ^4.1.1
-    solidity-ast: ^0.4.15
-  checksum: d8f67682e37ead031946da042639048adb63aaceab7e0d986a1dded613ab44a9fc78190a72c1be57f771ff494807225d49e20f565dd71aedf58c22b474ee8abd
   languageName: node
   linkType: hard
 
@@ -1233,10 +1202,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^16.4.13":
-  version: 16.4.13
-  resolution: "@types/node@npm:16.4.13"
-  checksum: 071e86a1d196cf72928a7109e99769dffed93db481032b9ca2f52e6f3ced432e2a179849c85e587e67409202e1ed37bffd0c7a31d38adf35a385d327dfe8bd72
+"@types/node@npm:^16.6.1":
+  version: 16.6.1
+  resolution: "@types/node@npm:16.6.1"
+  checksum: c13aa0da0c2bf9070e521d1b537ba38f64b213dd1b8aeec66c279fc21f8c0ccaf380364f6dc2ec8f84440c4cd1460b67dfe47de2cafcb6eaf4b648817cb27dc4
   languageName: node
   linkType: hard
 
@@ -1965,21 +1934,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cbor@npm:^7.0.0":
-  version: 7.0.6
-  resolution: "cbor@npm:7.0.6"
-  dependencies:
-    "@cto.af/textdecoder": ^0.0.0
-    nofilter: ^2.0.3
-  peerDependencies:
-    bignumber.js: ^9.0.1
-  peerDependenciesMeta:
-    bignumber.js:
-      optional: true
-  checksum: e0e109be85e80a5e6a7bccd4a9a0405c85e8df7e502958987f79e4372b2b005e2008bd72e588e5b88e2858711c7a6cd7087d0c7070d73c5dc683b2bf5f9c6aca
-  languageName: node
-  linkType: hard
-
 "chalk@npm:^2.0.0, chalk@npm:^2.4.1, chalk@npm:^2.4.2":
   version: 2.4.2
   resolution: "chalk@npm:2.4.2"
@@ -2247,13 +2201,6 @@ __metadata:
     array-ify: ^1.0.0
     dot-prop: ^5.1.0
   checksum: fb71d70632baa1e93283cf9d80f30ac97f003aabee026e0b4426c9716678079ef5fea7519b84d012cbed938c476493866a38a79760564a9e21ae9433e40e6f0d
-  languageName: node
-  linkType: hard
-
-"compare-versions@npm:^3.6.0":
-  version: 3.6.0
-  resolution: "compare-versions@npm:3.6.0"
-  checksum: 7492a50cdaa2c27f5254eee7c4b38856e1c164991bab3d98d7fd067fe4b570d47123ecb92523b78338be86aa221668fd3868bfe8caa5587dc3ebbe1a03d52b5d
   languageName: node
   linkType: hard
 
@@ -3021,7 +2968,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ethereumjs-util@npm:^7.0.3, ethereumjs-util@npm:^7.1.0":
+"ethereumjs-util@npm:^7.1.0":
   version: 7.1.0
   resolution: "ethereumjs-util@npm:7.1.0"
   dependencies:
@@ -3654,7 +3601,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"graceful-fs@npm:^4.1.2, graceful-fs@npm:^4.1.6, graceful-fs@npm:^4.1.9, graceful-fs@npm:^4.2.0, graceful-fs@npm:^4.2.4, graceful-fs@npm:^4.2.6":
+"graceful-fs@npm:^4.1.2, graceful-fs@npm:^4.1.6, graceful-fs@npm:^4.1.9, graceful-fs@npm:^4.2.0, graceful-fs@npm:^4.2.6":
   version: 4.2.6
   resolution: "graceful-fs@npm:4.2.6"
   checksum: 792e64aafda05a151289f83eaa16aff34ef259658cefd65393883d959409f5a2389b0ec9ebf28f3d21f1b0ddc8f594a1162ae9b18e2b507a6799a70706ec573d
@@ -5195,15 +5142,6 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"nofilter@npm:^2.0.3":
-  version: 2.0.3
-  resolution: "nofilter@npm:2.0.3"
-  dependencies:
-    "@cto.af/textdecoder": ^0.0.0
-  checksum: 1728a589c5ecb4e605f4bd42abfe20750205599e00bd895580f306823e9042e8fcd0796095f01d4f3bad21b6154d621f1c315b949ba312a2b64a73587561a7e4
-  languageName: node
-  linkType: hard
-
 "nopt@npm:^5.0.0":
   version: 5.0.0
   resolution: "nopt@npm:5.0.0"
@@ -5639,17 +5577,6 @@ fsevents@~2.3.1:
     err-code: ^2.0.2
     retry: ^0.12.0
   checksum: f96a3f6d90b92b568a26f71e966cbbc0f63ab85ea6ff6c81284dc869b41510e6cdef99b6b65f9030f0db422bf7c96652a3fff9f2e8fb4a0f069d8f4430359429
-  languageName: node
-  linkType: hard
-
-"proper-lockfile@npm:^4.1.1":
-  version: 4.1.2
-  resolution: "proper-lockfile@npm:4.1.2"
-  dependencies:
-    graceful-fs: ^4.2.4
-    retry: ^0.12.0
-    signal-exit: ^3.0.2
-  checksum: 00078ee6a61c216a56a6140c7d2a98c6c733b3678503002dc073ab8beca5d50ca271de4c85fca13b9b8ee2ff546c36674d1850509b84a04a5d0363bcb8638939
   languageName: node
   linkType: hard
 
@@ -6226,13 +6153,6 @@ resolve@1.17.0:
   bin:
     solcjs: solcjs
   checksum: 2d8eb16c6d8f648213c94dc8d977cffe5099cba7d41c82d92d769ef71ae8320a985065ce3d6c306440a85f8e8d2b27fb30bdd3ac38f69e5c1fa0ab8a3fb2f217
-  languageName: node
-  linkType: hard
-
-"solidity-ast@npm:^0.4.15":
-  version: 0.4.26
-  resolution: "solidity-ast@npm:0.4.26"
-  checksum: bfd07ea806fa3989a91f496457969afb292b840a74b0c4015ea16d9ff861091454e1ce3931e667bcbf8aa5c64f10b932fbe8ce50a4b594a031072ebd1938f948
   languageName: node
   linkType: hard
 

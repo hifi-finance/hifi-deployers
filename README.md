@@ -4,22 +4,10 @@ Deployer scripts for the Hifi protocol.
 
 ## Usage
 
-### Deploy BalanceSheet
-
-```sh
-yarn hardhat --network "..." deploy:BalanceSheet --fintroller "0x..." --oracle "0x..."
-```
-
 ### Deploy ChainlinkOperator
 
 ```sh
 yarn hardhat --network "..." deploy:ChainlinkOperator
-```
-
-### Deploy Fintroller
-
-```sh
-yarn hardhat --network "..." deploy:Fintroller
 ```
 
 ### Deploy HifiFlashUniswapV2
