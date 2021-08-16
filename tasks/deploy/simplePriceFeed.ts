@@ -4,14 +4,14 @@ import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
 import { task } from "hardhat/config";
 import { TaskArguments } from "hardhat/types";
 
-task("deploy:SimplePriceFeed")
+import { TASK_DEPLOY_SIMPLE_PRICE_FEED } from "../constants";
+
+task(TASK_DEPLOY_SIMPLE_PRICE_FEED)
   .addParam("description", "The description of the price feed")
-  .setAction(async function (taskArguments: TaskArguments, { ethers }) {
+  .setAction(async function (taskArgs: TaskArguments, { ethers }): Promise<string> {
     const signers: SignerWithAddress[] = await ethers.getSigners();
     const simplePriceFeedFactory: SimplePriceFeed__factory = new SimplePriceFeed__factory(signers[0]);
-    const simplePriceFeed: SimplePriceFeed = <SimplePriceFeed>(
-      await simplePriceFeedFactory.deploy(taskArguments.description)
-    );
+    const simplePriceFeed: SimplePriceFeed = <SimplePriceFeed>await simplePriceFeedFactory.deploy(taskArgs.description);
     await simplePriceFeed.deployed();
-    console.log("SimplePriceFeed deployed to: ", simplePriceFeed.address);
+    return simplePriceFeed.address;
   });

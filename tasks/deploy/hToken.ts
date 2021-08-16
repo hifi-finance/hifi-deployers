@@ -4,24 +4,26 @@ import { task } from "hardhat/config";
 import { TaskArguments } from "hardhat/types";
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
 
-task("deploy:HToken")
+import { TASK_DEPLOY_H_TOKEN } from "../constants";
+
+task(TASK_DEPLOY_H_TOKEN)
   .addParam("name", "The ERC-20 name of the token")
   .addParam("symbol", "The ERC-20 symbol of the token")
-  .addParam("maturity", "Unix timestamp in seconds for when this token matures")
+  .addParam("maturity", "Unix timestamp in seconds for when the hToken matures")
   .addParam("balanceSheet", "The address of the BalanceSheet contract")
-  .addParam("underlying", "The address of the underlying ERC-20  contract")
-  .setAction(async function (taskArguments: TaskArguments, { ethers }) {
+  .addParam("underlying", "The address of the underlying ERC-20 contract")
+  .setAction(async function (taskArgs: TaskArguments, { ethers }): Promise<string> {
     const signers: SignerWithAddress[] = await ethers.getSigners();
     const hTokenFactory: HToken__factory = new HToken__factory(signers[0]);
     const hToken: HToken = <HToken>(
       await hTokenFactory.deploy(
-        taskArguments.name,
-        taskArguments.symbol,
-        taskArguments.maturity,
-        taskArguments.balanceSheet,
-        taskArguments.underlying,
+        taskArgs.name,
+        taskArgs.symbol,
+        taskArgs.maturity,
+        taskArgs.balanceSheet,
+        taskArgs.underlying,
       )
     );
     await hToken.deployed();
-    console.log("HToken deployed to: ", hToken.address);
+    return hToken.address;
   });

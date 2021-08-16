@@ -4,10 +4,12 @@ import { HifiPoolRegistry__factory } from "@hifi/amm/typechain/factories/HifiPoo
 import { HifiPoolRegistry } from "@hifi/amm/typechain/HifiPoolRegistry";
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
 
-task("deploy:HifiPoolRegistry").setAction(async function (taskArguments: TaskArguments, { ethers }) {
+import { TASK_DEPLOY_HIFI_POOL_REGISTRY } from "../constants";
+
+task(TASK_DEPLOY_HIFI_POOL_REGISTRY).setAction(async function (_: TaskArguments, { ethers }): Promise<string> {
   const signers: SignerWithAddress[] = await ethers.getSigners();
   const hifiPoolRegistryFactory: HifiPoolRegistry__factory = new HifiPoolRegistry__factory(signers[0]);
   const hifiPoolRegistry: HifiPoolRegistry = <HifiPoolRegistry>await hifiPoolRegistryFactory.deploy();
   await hifiPoolRegistry.deployed();
-  console.log("HifiPoolRegistry deployed to: ", hifiPoolRegistry.address);
+  return hifiPoolRegistry.address;
 });

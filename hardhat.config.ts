@@ -1,6 +1,6 @@
 import "@nomiclabs/hardhat-ethers";
 
-import "./tasks/deployers";
+import "./tasks/deploy";
 
 import { resolve } from "path";
 
@@ -42,8 +42,19 @@ function getChainConfig(network: keyof typeof chainIds): NetworkUserConfig {
 }
 
 const config: HardhatUserConfig = {
-  defaultNetwork: "rinkeby",
+  defaultNetwork: "localhost",
   networks: {
+    hardhat: {
+      accounts: {
+        mnemonic,
+      },
+    },
+    localhost: {
+      accounts: {
+        mnemonic,
+      },
+      url: "http://localhost:8545",
+    },
     goerli: getChainConfig("goerli"),
     kovan: getChainConfig("kovan"),
     "polygon-mainnet": getChainConfig("polygon-mainnet"),

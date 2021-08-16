@@ -4,15 +4,17 @@ import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
 import { task } from "hardhat/config";
 import { TaskArguments } from "hardhat/types";
 
-task("deploy:StablecoinPriceFeed")
+import { TASK_DEPLOY_STABLECOIN_PRICE_FEED } from "../constants";
+
+task(TASK_DEPLOY_STABLECOIN_PRICE_FEED)
   .addParam("price", "The immutable price of the stablecoin, with 8 decimals of precision")
   .addParam("description", "The description of the price feed")
-  .setAction(async function (taskArguments: TaskArguments, { ethers }) {
+  .setAction(async function (taskArgs: TaskArguments, { ethers }): Promise<string> {
     const signers: SignerWithAddress[] = await ethers.getSigners();
     const stablecoinPriceFeedFactory: StablecoinPriceFeed__factory = new StablecoinPriceFeed__factory(signers[0]);
     const stablecoinPriceFeed: StablecoinPriceFeed = <StablecoinPriceFeed>(
-      await stablecoinPriceFeedFactory.deploy(taskArguments.price, taskArguments.description)
+      await stablecoinPriceFeedFactory.deploy(taskArgs.price, taskArgs.description)
     );
     await stablecoinPriceFeed.deployed();
-    console.log("StablecoinPriceFeed deployed to: ", stablecoinPriceFeed.address);
+    return stablecoinPriceFeed.address;
   });
